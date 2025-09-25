@@ -1,0 +1,14 @@
+@import "variables";
+
+@mixin flex-container {
+    padding: $spacer;
+    display: flex;
+    align-items: center;
+}
+
+.btn, .container{
+    @include flex-container;
+}
+
+
+

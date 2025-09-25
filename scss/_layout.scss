@@ -1,0 +1,118 @@
+@import "variables";
+
+body {
+  margin: 0;
+  font-family: $font-family;
+  color: $text-color;
+  line-height: 1.6;
+  font-size: $font-size;
+  background-color: $background-color;
+
+  h1 {
+    font-size: 24px;
+    text-align: center;
+    color: darken($primary-color, 10%);
+  }
+}
+
+.main-nav {
+    .nav-link {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+
+      &.is-active {
+        font-weight: bold;
+        border-bottom: 2px solid white;
+      }
+
+      &:hover {
+        color: lighten(white, 10%);
+      }
+    }
+  }
+
+.hero {
+  background: $secondary-color;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin: 0;
+  }
+
+  .btn-secondary {
+    margin-top: 0.5rem;
+  }
+}
+
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+  background: lighten($secondary-color, 40%);
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  .hours {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin: 0.25rem 0;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  gap: $spacer;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.site-footer {
+  background: $primary-color;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+
+  a {
+    color: lighten(white, 20%);
+    margin: 0 0.5rem;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
